@@ -6,7 +6,7 @@
 
 //!\\ A enlever lors du déploiement
 error_reporting(E_ERROR | E_PARSE);
-ini_set('display_errors', false);
+ini_set('display_errors', true);
 
 
 // --------------------------- //

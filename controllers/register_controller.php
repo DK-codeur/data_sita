@@ -1,5 +1,5 @@
 <?php
-isLogged();
+    include_once 'libs/phpqrcode/qrlib.php'; 
 
     $nom = $prenoms = $genre = $naissance = $telephone = $email = $residence = "";
     $nomError = $prenomsError = $genreError = $naissanceError = $telephoneError = $emailError = $residenceError = $error = "";
@@ -69,6 +69,13 @@ isLogged();
             if($isSuccess)
                 {
                     $req = Employe::insertEmploye($nom, $prenoms, $genre, $naissance, $telephone, $email, $residence);
+
+                    QRcode::png(
+                        'NOM: '.$nom, 
+                        'temp/hello.png', 
+                        QR_ECLEVEL_L, 
+                        5
+                    );
                     
                     $nom = $prenoms = $genre = $naissance = $telephone = $email = $residence = '';
                     $error = 'Inscription effectuée avec succès ! Merci';

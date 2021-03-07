@@ -127,7 +127,8 @@
                                             <tbody>
                                                 <?php foreach ($latestEmploye as $index => $latEmploye) : ?>
                                                     <tr>
-                                                            
+
+                                                        <td><?= $latEmploye['nom'] ?></td>
                                                         <td><?= $latEmploye['prenoms'] ?></td>
                                                         <td><?= $latEmploye['telephone'] ?></td>
                                                         <td><?= $latEmploye['genre'] ?></td>

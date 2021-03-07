@@ -25,7 +25,7 @@
     // isLogged
     function isLogged()
         {
-            if(!isset($_SESSION['user']))
+            if(!isset($_SESSION['adm']))
                 {
                     header('location:login');
                     exit();
@@ -76,14 +76,14 @@
         }
         
         
-        function isAdmin()
-        {
-            if ($_SESSION['user']['isAdmin'] != 1) {
-                header('location:home');
-                exit();
-            }
+        // function isAdmin()
+        // {
+        //     if ($_SESSION['adm']['isAdmin'] != 1) {
+        //         header('location:home');
+        //         exit();
+        //     }
         
-        }
+        // }
 
 
         
